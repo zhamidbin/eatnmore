@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Currency Converter</title>
+		<style type="text/css">
+		    a {
+		    	color : orange; 
+		    	text-decoration : none
+		    }
+		    a:visited {color : black}
+		    a:active {color : orange}
+		    a:hover {color : blue}
+
+		    p {
+		    	font-family: Verdana; 
+		    	color: #293329
+		    }
+		    h2{
+		    	text-align: center; 
+		    	font-size: 40px; 
+		    	font-family: Copperplate, 'Copperplate Gothic Light', fantasy; 
+		    	color: #293329
+		    }
+		    h3 {
+		    	font-size: 25px; 
+		    	font-family: Copperplate, 'Copperplate Gothic Light', fantasy;
+		    	color: #293329
+		    }
+		</style>
+	</head>
+
+
+
+<body style="background-color: #FFDB94">
+
+<h2 style="text-align: center; font-size: 40px; font-family: Copperplate, 'Copperplate Gothic Light', fantasy; color: #293329">Currency Converter</h2>
+
+<hr/>
+<a href="http://localhost/index.html">Home</a> &nbsp;
+<a href="http://localhost/convert.html">Converter</a>
+<hr/>
+
+USD : <input type="text" id="usd" maxlength="9" oninput="convUSD()"><br/>
+EUR : <input type="text" id="eur" maxlength="9" oninput="convEUR()"><br/>
+GBP : <input type="text" id="gbp" maxlength="9" oninput="convGBP()"><br/>
+AUD : <input type="text" id="aud" maxlength="9" oninput="convAUD()"><br/>
+CAD : <input type="text" id="cad" maxlength="9" oninput="convCAD()"><br/>
+<br/>
+
+
+
+<script type="text/javascript">
+
+function convUSD() {
+	// body...
+	var u = document.getElementById("usd").value;
+	eur.value = u * 0.88224;
+	gbp.value = u * 0.65649;
+	aud.value = u * 1.27999;
+	cad.value = u * 1.24574;
+}
+function convEUR() {
+	// body...
+	var e = document.getElementById("eur").value;
+	usd.value = e * 1.13348;
+	gbp.value = e * 0.74412;
+	aud.value = e * 1.45084;
+	cad.value = e * 1.41202;
+}
+function convGBP() {
+	// body...
+	var g = document.getElementById("gbp").value;
+	usd.value = g * 1.52325;
+	eur.value = g * 1.34387;
+	aud.value = g * 1.94974;
+	cad.value = g * 1.89757;
+}
+function convAUD() {
+	// body...
+	var a = document.getElementById("aud").value;
+	usd.value = a * 0.78126;
+	eur.value = a * 0.68926;
+	gbp.value = a * 0.51289;
+	cad.value = a * 0.97324;
+}
+function convCAD() {
+	// body...
+	var c = document.getElementById("cad").value;
+	usd.value = c * 0.80274;
+	eur.value = c * 0.70821;
+	gbp.value = c * 0.52699;
+	aud.value = c * 1.02750;
+}
+
+</script>
+
+
+</body>
+</html>
